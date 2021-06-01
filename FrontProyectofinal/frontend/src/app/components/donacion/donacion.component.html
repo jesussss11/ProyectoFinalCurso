@@ -1,0 +1,46 @@
+
+<body class="align">
+
+    <div class="login">
+  
+      <header class="login__header">
+        <h2><svg class="icon">
+           
+          </svg>YoDono</h2>
+      </header>
+  
+      <form action="#" class="login__form" method="POST" (ngSubmit)="f"
+      #f="ngForm">
+
+      <div>
+        <label>Vas a realizar una donacion a:{{this.usuario.nombre}}</label>
+      </div>
+  
+        <div>
+          <label for="password">¿Que vas a donar?</label>
+          <input class="input100" 
+                       type="string" 
+                       name="email" 
+                       [(ngModel)]="peticion.descripcion"
+                       
+                       required
+                       email
+                       placeholder=" ">
+        </div>
+  
+       
+        
+        
+  
+        <div>
+          <input class="button" type="submit" value="Donar">
+          <button  class="btn btn-success"(click)="donar()">Success</button>
+        </div>
+  
+      </form>
+  
+    </div>
+  
+    
+  
+  </body>

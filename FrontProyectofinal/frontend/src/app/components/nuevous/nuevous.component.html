@@ -1,0 +1,126 @@
+<body class="align">
+
+    <div class="login">
+  
+      <header class="login__header">
+        <h2> <a class="navbar-logo" href="#">
+          <img src="../../../assets/img/logo_small_icon_onlyrere (1).png" >
+        </a>YODONO</h2>
+      </header>
+  
+      <form action="#" class="login__form"  (ngSignin)="onSubmit( f )"
+      #f="ngForm">
+  
+        <div>
+          <label for="password">Email:</label>
+          <input class="input100" 
+          type="email"  
+                       name="email" 
+                       [(ngModel)]="usuario.email"
+                       
+                       required
+                       email
+                       placeholder="email">
+        </div>
+
+
+        <div class="wrap-input100 m-b-16">
+            <label for="email">Nombre:</label>
+            <input class="input100" 
+            type="email" 
+                   name="email" 
+                   [(ngModel)]="usuario.nombre"
+                   minlength="2"
+                   required
+                   placeholder="Nombre del usuario">
+
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 m-b-16">
+            <label for="direccion">Direccion:</label>
+            <input class="input100" 
+            type="email"
+                 name="direccion"
+                 [(ngModel)]="usuario.direccion"
+                    required
+                  placeholder="Direccion">
+
+      <span class="focus-input100"></span>
+         </div>
+
+         <div class="wrap-input100 m-b-16">
+            <label for="telefono">Telefono:</label>
+            <input class="input100" 
+            type="email" 
+             name="telefono"
+             [(ngModel)]="usuario.telefono"
+              required
+               placeholder="Telefono">
+
+        <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 m-b-16">
+                <label for="cif">DNI:</label>
+                <input class="input100" 
+                    type="email"
+                      name="CIF"
+                      [(ngModel)]="usuario.dni"
+                      required
+                      
+                      placeholder="DNI">
+        
+                 <span class="focus-input100"></span>
+                 </div>
+
+                 
+
+  
+        <div>
+          <label for="password">Password:</label>
+          <input class="input100"
+                        type="password" 
+                        name="password" 
+                        [(ngModel)]="usuario.password"
+                        
+                        required
+                        minlength="6"
+                        placeholder="Password">
+        </div>
+        
+        
+        <div class="flex-sb-m w-full p-t-3 p-b-24">
+            <div class="contact100-form-checkbox">
+                <input [(ngModel)]="recordarme"
+                       class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                <label class="label-checkbox100" for="ckb1">
+                    Recordar mi usuario
+                </label>
+            </div>
+
+            <div>
+                <a routerLink="/login" class="txt1">
+                    ¿Ya tienes cuenta? / Ingresar
+                </a>
+            </div>
+        </div>
+
+        <div class="container-login100-form-btn m-t-17">
+            <button class="submit" type="submit">
+                Crear cuenta
+            </button>
+        </div>
+  
+      </form>
+  
+    </div>
+  
+    <svg xmlns="http://www.w3.org/2000/svg" class="icons">
+  
+      <symbol id="icon-lock" viewBox="0 0 448 512">
+        <path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z" />
+      </symbol>
+  
+    </svg>
+</body>

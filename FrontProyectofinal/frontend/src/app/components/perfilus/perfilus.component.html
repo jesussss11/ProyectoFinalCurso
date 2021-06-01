@@ -1,0 +1,66 @@
+
+<html>
+    
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #ffffd8;">
+      <div class="container-fluid">
+        <a class="navbar-logo" href="#">
+          <img src="../../../assets/img/logo_smallrere.png" >
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/usuario">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/historialus">Historial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="filter" [(ngModel)]="filter">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      <hr>
+    </nav>
+  
+    
+    <div class="container">
+        <div class="row" style="margin-left: 120px; margin-right: 120px"  id="htmlData">
+            <div class="col-md-4"   *ngFor="let usuario of Usuarios| piperfil:filterperf">
+              
+                <div class="card mb-3 animated zoomIn" style="right: -200px;width: 400px;height: 500px;">
+                  
+                    <h4 class="card-header">Nombre: {{usuario.nombre}}</h4>
+                    <div class="card-body">
+                      <h5 class="card-title"><b>Email: </b>{{usuario.email}}</h5>
+                      <h5 class="card-title"><b>Direccion: </b>{{usuario.direccion}}</h5>
+                      <h5 class="card-title"><b>DNI: </b>{{usuario.dni}}</h5>
+                      <h5 class="card-title"><b>Telefono: </b>{{usuario.telefono}}</h5>
+                      
+                    </div>
+                   
+                    
+                    <div class="card-body d-flex justify-content-between">
+                      <button class="btn btn-outline-primary"(click)="Modificarcuenta(usuario)" ><i class="far fa-eye"></i>Modificar cuenta</button>
+                      <button class="btn btn-outline-danger" (click)="Eliminarcuenta(usuario)"><i class="far fa-trash-alt"></i> Eliminar cuenta</button>
+                    </div>
+                  </div>
+                  
+               
+             
+                   
+                
+               </div>   
+        </div>
+        </div>
+
+
+
+</html>
