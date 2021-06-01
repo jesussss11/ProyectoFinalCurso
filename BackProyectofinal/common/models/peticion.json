@@ -1,0 +1,50 @@
+{
+  "name": "peticion",
+  "plural": "peticiones",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "id_asoc": {
+      "type": "string",
+      "required": true
+    },
+    "id_usuario": {
+      "type": "string",
+      "required": true
+    },
+    "nombre_asoc": {
+      "type": "string",
+      "required": true
+    },
+    "nombre_user": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "string",
+      "required": true
+    },
+    "estado": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}
